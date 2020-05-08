@@ -16,10 +16,10 @@ def get_indices_of_item_weights(weights, length, limit):
     # return None
 
     cache = {}
-    # hash weights first for easy lookup 
-    # enumerate to pass index as value
-    # for loop the subtraction 
-    # limit - place in the loop, look to see if that exists in the hash table and spit out that index as the answer
+    # Hash weights first for easy lookup 
+    # Enumerate to pass index as value
+    # For loop the subtraction 
+    # Limit - place in the loop, look to see if that exists in the hash table and spit out that index as the answer
     for index, v in enumerate(weights):
         cache.setdefault(v, []).append(index)
     for i in weights:
