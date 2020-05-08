@@ -1,8 +1,25 @@
 def finder(files, queries):
 
-    """
-    YOUR CODE HERE
-    """
+    cache = {}
+    result = []
+
+    # Loop through queries
+    for q_str in queries:
+        # print('q_str', q_str)
+        # Loop through the files
+        for path in files:
+            if q_str in path:
+                # Add key with value as 1
+                cache[q_str] = path
+                # print(cache)
+                # result.append(path)
+            # print(path)
+
+    print(cache)
+
+    for q in queries:
+        if q in cache:
+            result.append(cache[q])
 
     return result
 
